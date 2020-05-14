@@ -1,4 +1,4 @@
-#### Install ansible for linux
+#### Install ansible for linux (working checked 14.5.2020)
   * sudo yum update -y
   * sudo yum install -y python-boto python-boto3
   * sudo rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
@@ -18,6 +18,12 @@
   * In order to see if EPEL repo is already available, use command--> yum repolist | grep epel
   * use this command for RHEL/CentOS 6--> rpm -ivh http://d1.fedoraproject.org/pub/epel/6/x86_64/\     epel-release-6.8.noarch.rpm
   * For RHEL/Centos7 use--> yum install epel-release
+
+#### New method for AWS RHEL8/Cent OS system (working checked 14.5.2020)
+  * sudo yum update
+  * us this command for RHEL/Cent OS8: sudo  yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+  * sudo yum install epel-release
+  * sudo yum install ansible
   
 #### For Debian/Ubuntu
   * sudo apt-get install python-software-properties
