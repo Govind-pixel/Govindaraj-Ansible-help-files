@@ -1,0 +1,20 @@
+---
+- name: Installing httpd
+  hosts: hosts
+  become: true
+  tasks:
+    - name: Installing web server
+      yum:
+        name: httpd
+        state: present
+    - name: starting the service
+      service:
+        name: httpd
+        state: started
+    - name: copying the file
+      copy:
+        src: /home/ec2-user/ansible/files/httpd.conf
+        dest: /var/www/html/index.html
+        mode: 0644
+        backup: yes
+
